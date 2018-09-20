@@ -1,0 +1,2 @@
+# ilkomerzjuara
+NO GORENGAN ALLOWED!
