@@ -1,2 +1,2 @@
 # ilkomerzjuara
-GORENGAN ALLOWED!
+GORENGAN ALLOWED!!
