@@ -1,0 +1,2 @@
+main color (blue) : #1E1E53
+		    30 30 83
