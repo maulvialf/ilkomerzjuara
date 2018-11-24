@@ -45,7 +45,8 @@ export class MyApp {
     { title: 'Search', component: 'SearchPage' },
     { title: 'Dashboard', component: 'DashboardPage' },
     { title: 'Leaderboard', component: 'LeaderboardPage' },
-    { title: 'Komunitas', component: 'KomunitasPage' }
+    { title: 'Komunitas', component: 'KomunitasPage' },
+    { title: 'Profile', component: 'ProfilePage'}
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {

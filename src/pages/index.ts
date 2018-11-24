@@ -9,3 +9,4 @@ export const MainPage = 'TabsPage';
 export const Tab1Root = 'DashboardPage';
 export const Tab2Root = 'LeaderboardPage';
 export const Tab3Root = 'KomunitasPage';
+export const Tab4Root = 'ProfilePage';
