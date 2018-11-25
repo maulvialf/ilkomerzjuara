@@ -1,3 +1,33 @@
 page-profile {
-
+    .user-cover {
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        height: 250px;
+        z-index: 1;
+        position: relative;
+      }
+    
+      .user-desc {
+        width: 100%;
+        background: white;
+        position: absolute;
+      }
+      .user-photo {
+        margin: auto;
+        position: relative;
+        top:25%;
+        // background: url('../assets/img/logoilkomerzjuara.png') center center no-repeat 
+        width: 120px;
+        height: 120px;
+        z-index: 2;
+      }
+      .user-profile-pic{
+        border: 2px solid #fff;
+        border-radius:50%;
+      }
+      .bio{
+        text-align: center;
+        font-size: 12px;
+      }
 }

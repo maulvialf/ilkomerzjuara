@@ -6,13 +6,25 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>profile</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Profile</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <div class="user-cover" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+    <div class="user-photo"><img src="../assets/img/db (4).jpg" class="user-profile-pic"></div>
+  </div>
+  
+  <div class="user-desc" padding>
+    <h2 align="center">Iyang Aneka Wibowo</h2>
+    <h5 align="center">G64160030</h5>
+    <p padding class="bio">I'm a Computer Science student currently on
+      my 5th semester at Department of Computer
+      Science, Bogor Agricultural University (IPB). Feel
+      free to InMail me if you want to send critiques,
+      suggestions or simply a message.</p>
+  </div>
 </ion-content>
