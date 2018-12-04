@@ -1,17 +1,11 @@
 
-<ion-content>
-      <div padding>
-        <div class="splash-info">
-          <img src="assets/img/logoilkomerzjuara.png" class="splash-logo">
-          <!-- <div class="splash-intro">
-            Ilkomerz Juara
-          </div> -->
-        </div>
+<ion-content center>
+    <img center src="assets/img/logoilkomerzjuara.png">
         <div padding>
           <form (submit)="doLogin()">
             <ion-list>
 
-              <ion-item>
+              <ion-item no-lines>
                 <ion-label><ion-icon name="person"> </ion-icon></ion-label>
                 <ion-input type="text" placeholder="Username" [(ngModel)]="account.username" name="username"></ion-input>
               </ion-item>
@@ -25,7 +19,7 @@
               </ion-item>
               -->
 
-              <ion-item>
+              <ion-item no-lines>
                 <ion-label><ion-icon name="lock"> </ion-icon></ion-label>
                 <ion-input type="text" placeholder="Password" *ngIf="showPwd" ></ion-input>
                 <ion-input type="password" placeholder="Password" *ngIf="!showPwd" ></ion-input>
@@ -40,5 +34,4 @@
             </ion-list>
           </form>
         </div>
-      </div>
 </ion-content>

@@ -7,16 +7,16 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content  padding>
   <form (submit)="doSignup()">
-    <ion-list>
+    <ion-list class="middle" >
 
-      <ion-item>
+      <ion-item no-lines>
         <ion-label fixed>{{ 'NAME' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item no-lines>
         <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
         <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
