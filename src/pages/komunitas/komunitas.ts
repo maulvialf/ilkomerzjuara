@@ -21,5 +21,7 @@ export class KomunitasPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad KomunitasPage');
   }
-
+  openPage(){
+    this.navCtrl.push('QrcodePage');
+  }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, ModalController, ViewController, NavParams } from 'ionic-angular';
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
@@ -28,7 +28,9 @@ export class LeaderboardPage {
    */
   ionViewDidLoad() {
   }
+  ionViewWillEnter(){
 
+  }
   /**
    * Prompt the user to add a new item. This shows our ItemCreatePage in a
    * modal and then adds the new item to our data source if the user created one.
@@ -57,5 +59,8 @@ export class LeaderboardPage {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });
+  }
+  openPage(){
+    this.navCtrl.push('CameraPage');
   }
 }

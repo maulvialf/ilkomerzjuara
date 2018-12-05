@@ -7,6 +7,8 @@ import { Config, Nav, Platform } from 'ionic-angular';
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
 
+
+
 @Component({
   template: `<ion-menu [content]="content">
     <ion-header>
@@ -26,6 +28,7 @@ import { Settings } from '../providers';
   </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
+
 export class MyApp {
   rootPage = FirstRunPage;
 
@@ -46,7 +49,9 @@ export class MyApp {
     { title: 'Dashboard', component: 'DashboardPage' },
     { title: 'Leaderboard', component: 'LeaderboardPage' },
     { title: 'Komunitas', component: 'KomunitasPage' },
-    { title: 'Profile', component: 'ProfilePage'}
+    { title: 'Profile', component: 'ProfilePage'},
+    { title: 'QRCode', component: 'QrcodePage'},
+    { title: 'Camera', component: 'CameraPage'}
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
