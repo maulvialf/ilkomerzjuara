@@ -51,7 +51,8 @@ export class MyApp {
     { title: 'Komunitas', component: 'KomunitasPage' },
     { title: 'Profile', component: 'ProfilePage'},
     { title: 'QRCode', component: 'QrcodePage'},
-    { title: 'Camera', component: 'CameraPage'}
+    { title: 'Camera', component: 'CameraPage'},
+    { title: 'Edit Profile', component: 'EditprofilePage'}
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {

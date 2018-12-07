@@ -3,7 +3,7 @@
   <ion-navbar color="primary">
     <ion-title>Leaderboard</ion-title>
     <ion-buttons end>
-        <button ion-button color="white" icon-only (click)="openPage()">
+        <button ion-button color="light" icon-only (click)="openPage()">
             <ion-icon name='camera'></ion-icon>
         </button>
     </ion-buttons>
@@ -26,7 +26,7 @@
           <img [src]="item.profilePic" />
         </ion-avatar>
         <h2>{{item.name}}</h2>
-        <ion-note item-end text-center color="primary">{{(currentItems.length-i)*100+i*13}}<br>Points</ion-note>
+        <ion-badge item-end text-center color="primary">{{(currentItems.length-i)*100+i*13}}<br>Points</ion-badge>
       </button>
     </ion-item-sliding>
   </ion-list>
@@ -34,7 +34,7 @@
   <ion-footer>
     <ion-list>
       <ion-item-sliding>
-        <button color="primary"  ion-item (click)="openItem(item)">
+        <button color="primary" ion-item>
           <ion-note item-start text-center color="light" >n</ion-note>
           <ion-avatar item-start>
             <img src="../assets/img/db (4).jpg">

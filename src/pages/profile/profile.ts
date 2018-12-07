@@ -22,4 +22,7 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
+  openPage(){
+    this.navCtrl.push('EditprofilePage');
+  }
 }

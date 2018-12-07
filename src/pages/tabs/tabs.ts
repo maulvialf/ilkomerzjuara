@@ -15,7 +15,7 @@ export class TabsPage {
   tab3Root: any = Tab3Root;
   tab4Root: any = Tab4Root;
 
-  tab1Title = "Dashboard";
+  tab1Title = "News";
   tab2Title = "Leaderboard";
   tab3Title = "Komunitas";
   tab4Title = "Profile";

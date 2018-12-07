@@ -7,24 +7,50 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title text-center>Profile</ion-title>
+    <ion-title>Profile</ion-title>
+    <ion-buttons end>
+        <button ion-button color="light" icon-only (click)="openPage()">
+            <ion-icon name='create'></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content>
-  <div class="user-cover" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-    <div class="user-photo"><img src="../assets/img/db (4).jpg" class="user-profile-pic"></div>
+    <div padding>
+  <ion-list>
+      <ion-item>
+        <ion-thumbnail item-start>
+            <img src="../assets/img/iyang.png" class="user-profile-pic">
+        </ion-thumbnail>
+        <h2>Iyang Aneka Wibowo</h2>
+        <p>G64160030</p>
+        <small>iyangankwibowo@apps.ipb.ac.id</small>
+      </ion-item>
+          <p  >I'm a Computer Science student currently on
+              my 5th semester at Department of Computer
+              Science, Bogor Agricultural University (IPB). Feel
+              free to InMail me if you want to send critiques,
+              suggestions or simply a message.</p>
+      <ion-list-header text-center>
+          Skill
+      </ion-list-header>  
+          <ion-chip color="primary"><ion-label color="light">Laravel</ion-label></ion-chip>
+          <ion-chip color="primary"><ion-label color="light">Ionic</ion-label></ion-chip>
+          <ion-chip color="primary"><ion-label color="light">Public Speaking</ion-label></ion-chip>
+          <ion-chip color="primary"><ion-label color="light">Team Management</ion-label></ion-chip>
+          <ion-chip color="primary"><ion-label color="light">Front-End Engineering</ion-label></ion-chip>
+          <ion-chip color="primary"><ion-label color="light">UX Designing</ion-label></ion-chip>
+      <ion-list-header text-center>
+          Penghargaan
+      </ion-list-header>
+          <ion-item>Juara 1 Lomba ***</ion-item>
+          <ion-item>Juara 2 Lomba ***</ion-item>
+          <ion-item>Juara 1 Lomba ***</ion-item>
+    </ion-list>
+    <hr>
+      
   </div>
-  
-  <div class="user-desc" padding>
-    <h2 align="center">Iyang Aneka Wibowo</h2>
-    <h5 align="center">G64160030</h5>
-    <p padding class="bio">I'm a Computer Science student currently on
-      my 5th semester at Department of Computer
-      Science, Bogor Agricultural University (IPB). Feel
-      free to InMail me if you want to send critiques,
-      suggestions or simply a message.</p>
-  </div>
+    
 </ion-content>
