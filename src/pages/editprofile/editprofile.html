@@ -21,6 +21,16 @@
         <ion-label stacked>Email</ion-label>
         <ion-input type="text" value="iyangankwibowo@gmail.com"></ion-input>
     </ion-item>
+    <ion-item>
+        <ion-label stacked>Lab</ion-label>
+        <ion-select [(ngModel)]="lab" placeholder="None" interface="popover">
+          <ion-option value="none">None</ion-option>
+          <ion-option value="CI">CI</ion-option>
+          <ion-option value="CIO">CIO</ion-option>
+          <ion-option value="NCC">NCC</ion-option>
+          <ion-option value="SEIS">SEIS</ion-option>
+        </ion-select>
+      </ion-item>
     <ion-list-header text-center no-lines>
         Skill
         <button ion-button block clear>Add Skill</button>

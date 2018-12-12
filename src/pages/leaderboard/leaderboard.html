@@ -1,48 +1,56 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Leaderboard</ion-title>
-    <ion-buttons end>
-        <button ion-button color="light" icon-only (click)="openPage()">
-            <ion-icon name='camera'></ion-icon>
-        </button>
-    </ion-buttons>
-    <!-- <ion-buttons end>
-      <button ion-button icon-only (click)="addItem()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons> -->
+      <ion-title>Leaderboard</ion-title>
+      <ion-buttons end>
+          <button ion-button color="light" icon-only (click)="openPage()">
+              <ion-icon name='camera'></ion-icon>
+          </button>
+      </ion-buttons>
+      <!-- <ion-buttons end>
+    <button ion-button icon-only (click)="addItem()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons> -->
   </ion-navbar>
 
 </ion-header>
 
 <ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)" pulling-text="Pull to refresh...">
+      <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-content>
 
-  <ion-list>
-    <ion-item-sliding *ngFor="let item of currentItems;let i=index">
-      <button  ion-item (click)="openItem(item)">
-        <ion-note item-start text-center color="primary" >{{i+1}}.</ion-note>
-        <ion-avatar item-start>
-          <img [src]="item.profilePic" />
-        </ion-avatar>
-        <h2>{{item.name}}</h2>
-        <ion-badge item-end text-center color="primary">{{(currentItems.length-i)*100+i*13}}<br>Points</ion-badge>
-      </button>
-    </ion-item-sliding>
-  </ion-list>
+      <ion-list>
+          <ion-item-sliding *ngFor="let item of currentItems;let i=index">
+              <button ion-item (click)="openItem(item)" detail-none>
+                  <ion-note item-start text-center color="primary">{{i+1}}.</ion-note>
+                  <ion-avatar item-start>
+                      <img [src]="item.profilePic" />
+                  </ion-avatar>
+                  <h2>{{item.name}}</h2>
+                  <ion-badge item-end text-center color="light">{{(currentItems.length-i)*100+i*13}}
+                      <br>Points</ion-badge>
+              </button>
+          </ion-item-sliding>
+      </ion-list>
 
-  <ion-footer>
-    <ion-list>
-      <ion-item-sliding>
-        <button color="primary" ion-item>
-          <ion-note item-start text-center color="light" >n</ion-note>
-          <ion-avatar item-start>
-            <img src="../assets/img/db (4).jpg">
-          </ion-avatar>
-          <h2>Iyang A. Wibowo</h2>
-          <ion-note item-end text-center color="light">120<br>Points</ion-note>
-        </button>
-      </ion-item-sliding>
-    </ion-list>
-  </ion-footer>
-</ion-content>
+      <ion-footer>
+          <ion-toolbar>
+          <ion-list>
+              <ion-item-sliding>
+                  <button color="dark" ion-item detail-none>
+                      <ion-note item-start text-center color="light">n</ion-note>
+                      <ion-avatar item-start>
+                          <img src="../assets/img/db (4).jpg">
+                      </ion-avatar>
+                      <h2>Iyang A. Wibowo</h2>
+                      <ion-note item-end text-center color="light">120
+                          <br>Points</ion-note>
+                  </button>
+              </ion-item-sliding>
+          </ion-list>
+        </ion-toolbar>
+      </ion-footer>
+  </ion-content>

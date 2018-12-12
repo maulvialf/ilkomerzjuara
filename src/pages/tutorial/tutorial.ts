@@ -42,12 +42,6 @@ export class TutorialPage {
         image: 'assets/img/leaderboard.png',
       },
       {
-        title: "Hall of Fame",
-        description: "Anda akan menemukan <b>informasi terkini</b> terkait \
-                      <b>prestasi</b> dan <b>kontribusi</b> Ilkomerz untuk Departemen Ilmu Komputer IPB.",
-        image: 'assets/img/halloffame.png',
-      },
-      {
         title: "Community",
         description: "<b>Temukan minat</b> mu dan <b>asah kemampuan</b> mu di komunitas-komunitas \
                         yang ada di Departemen Ilmu Komputer IPB.",

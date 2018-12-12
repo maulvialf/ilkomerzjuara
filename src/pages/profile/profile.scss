@@ -18,16 +18,19 @@ page-profile {
         position: relative;
         top:25%;
         // background: url('../assets/img/logoilkomerzjuara.png') center center no-repeat 
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
         z-index: 2;
       }
       .user-profile-pic{
-        border: 2px solid #fff;
+        border: 1px solid #fff;
         border-radius:50%;
       }
       .bio{
         text-align: justify;
         font-size: 12px;
+      }
+      .list-header{
+        margin-bottom:5px;
       }
 }

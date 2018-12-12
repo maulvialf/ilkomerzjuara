@@ -1,45 +1,50 @@
-<ion-header >
+<ion-header>
 
-    <ion-navbar color="primary">
-      <ion-title>Dashboard</ion-title>
-    </ion-navbar>
-  
-  </ion-header>
-  
-  
-  <ion-content>
-  
-    <ion-card *ngFor="let item of cardItems">
-        <button  ion-item (click)="openItem(item)">
+  <ion-navbar color="primary">
+      <ion-title>News</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)" pulling-text="Pull to refresh..." spinner="android">
+      <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let item of cardItems">
+      <button ion-item (click)="openItem(item)" detail-none>
           <ion-item>
-            <h3><b>{{item.name}}</b></h3>
+              <h3><b>{{item.name}}</b></h3>
           </ion-item>
-        
+
           <img [src]="item.image">
-          
+
           <ion-card-content>
-            <p>{{item.content}}</p>
-            
+              <p>{{item.content}}</p>
+
           </ion-card-content>
-      
+
           <ion-row>
-            
-            <ion-col>
-              <button ion-button color="primary" clear small icon-start>
-                  <ion-icon name='thumbs-up'></ion-icon>
-                  12
-              </button>
-              <button ion-button color="primary" clear small icon-start>
-                  <ion-icon name='text'></ion-icon>
-                  4 
-                </button>
-                <button ion-button color="primary" clear small icon-start>
-                    <ion-icon name='alarm'></ion-icon>
-                    <small>{{item.date}}</small> 
+
+              <ion-col>
+                  <button ion-button color="primary" clear small icon-start>
+                      <ion-icon name='thumbs-up'></ion-icon>
+                      12
                   </button>
-                
-            </ion-col>
+                  <button ion-button color="primary" clear small icon-start>
+                      <ion-icon name='text'></ion-icon>
+                      4
+                  </button>
+                  <button ion-button color="primary" clear small icon-start>
+                      <ion-icon name='alarm'></ion-icon>
+                      <small>{{item.date}}</small>
+                  </button>
+
+              </ion-col>
           </ion-row>
-</button> 
-    </ion-card>
-  </ion-content>
+      </button>
+  </ion-card>
+  <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+</ion-content>
